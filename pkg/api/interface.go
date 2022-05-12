@@ -1,0 +1,19 @@
+package api
+
+import (
+	"github.com/labstack/echo/v4"
+)
+
+// API ...
+type API interface {
+	// NewRouter ...
+	NewRouter() *echo.Echo
+	// Run ...
+	Run()
+	// GetBooks ...
+	GetBooks(echo.Context) error
+	// AddBook ...
+	AddBook(echo.Context) error
+	// DeleteBook ...
+	DeleteBook(echo.Context) error
+}
